@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hello.dao1.AdminDao">
+    <select id="find" resultType="hello.entity.AdminDo">
+        select
+        user_id as userId,
+        user_name as userName,
+        id_own_org as idOwnOrg
+        from sys_admin
+        where
+        user_name = #{userName}
+    </select>
+
+</mapper>
