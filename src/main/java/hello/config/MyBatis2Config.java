@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 public class MyBatis2Config {
 
     @Autowired
-    @Qualifier("secondDatasource")
+    @Qualifier("dataSource")
     private DataSource ds2;
 
     @Bean
