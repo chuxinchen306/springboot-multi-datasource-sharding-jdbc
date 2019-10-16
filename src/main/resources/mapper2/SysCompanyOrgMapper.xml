@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hello.dao2.CompanyOrgDao2">
+    <select id="findCompanyOrgByOrgId" resultType="hello.entity.SysCompanyOrgDo">
+        select
+        id as id,
+        company_id as companyId,
+        id_own_org as idOwnOrg
+        from sys_company_org
+        where
+        id_own_org = #{idOwnOrg}
+    </select>
+
+    <insert id="insert">
+        insert into sys_company_org (company_id,id_own_org) values (#{companyId},#{idOwnOrg})
+    </insert>
+
+</mapper>

@@ -10,5 +10,7 @@
         where
         user_name = #{userName}
     </select>
-
+    <insert id="insert">
+        insert into sys_admin (user_name,id_own_org) values (#{userName},#{idOwnOrg})
+    </insert>
 </mapper>

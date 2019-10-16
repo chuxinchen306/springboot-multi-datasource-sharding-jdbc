@@ -5,4 +5,6 @@ import hello.entity.AdminDo;
 public interface AdminDao {
 
     AdminDo find(String userName);
+
+    void insert(AdminDo adminDo);
 }
